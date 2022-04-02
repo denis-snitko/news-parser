@@ -11,7 +11,7 @@ export const MainScreen = ({ route }) => {
   const [isLoading, setIsLoading] = React.useState(false);
 
   const getData = (category = '') => {
-		setIsLoading(true);
+    setIsLoading(true);
     const cat = `category=${category}`;
     fetch(`https://newsapi.org/v2/top-headlines?country=ru&${cat}&apiKey=${API_KEY}`)
       .then(response => {
@@ -43,7 +43,7 @@ export const MainScreen = ({ route }) => {
   return (
     <View style={styles.safeArea}>
       <View style={styles.header}>
-        <Text style={styles.textStyle}>ТОП Новости</Text>
+        <Text style={styles.textStyle}>Новости</Text>
       </View>
       <FlatList
         ref={flatList}
